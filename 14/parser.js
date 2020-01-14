@@ -12,7 +12,6 @@ https.get(url,(res) => {
         body += chunk;
         json = JSON.parse(body);
         for(let i = 0; i<json.length; i++) {
-            //console.log('Курс ' + json[i].ccy + ' равен: купля - ' + json[i].buy + ' продажа - ' + json[i].sale);
             data += 'Курс ' + json[i].ccy + ' равен: купля - ' + json[i].buy + ' продажа - ' + json[i].sale + '\n';
         }        
         console.log(data);
