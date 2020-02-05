@@ -1,4 +1,4 @@
-//ATM
+// ATM
 
 function atm(card, cb) {
     setTimeout(function(){
