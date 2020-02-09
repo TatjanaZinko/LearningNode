@@ -1,0 +1,205 @@
+doctype html
+head
+  meta(charset='utf-8')
+  title Metronic &quot;Acidus&quot; Frontend Freebie
+  meta(http-equiv='X-UA-Compatible' content='IE=edge')
+  meta(content='width=device-width, initial-scale=1' name='viewport')
+  meta(content='' name='description')
+  meta(content='' name='author')
+  // GLOBAL MANDATORY STYLES
+  link(href='http://fonts.googleapis.com/css?family=Hind:300,400,500,600,700' rel='stylesheet' type='text/css')
+  link(href='vendor/simple-line-icons/simple-line-icons.min.css' rel='stylesheet' type='text/css')
+  link(href='vendor/bootstrap/css/bootstrap.min.css' rel='stylesheet' type='text/css')
+  // THEME STYLES
+  link(href='css/layout.min.css' rel='stylesheet' type='text/css')
+  // Favicon
+  link(rel='shortcut icon' href='favicon.ico')
+// END HEAD
+// BODY
+// ========== HEADER ==========
+header.header
+  // Navbar
+  nav.navbar(role='navigation')
+    .container
+      // Brand and toggle get grouped for better mobile display
+      .menu-container
+        button.navbar-toggle(type='button' data-toggle='collapse' data-target='.nav-collapse')
+          span.sr-only Toggle navigation
+          span.toggle-icon
+        // Logo
+        .navbar-logo
+          a.navbar-logo-wrap(href='index.html')
+            img.navbar-logo-img(src='img/logo.png' alt='Acidus Logo')
+        // End Logo
+      // Collect the nav links, forms, and other content for toggling
+      .collapse.navbar-collapse.nav-collapse
+        .menu-container
+          ul.navbar-nav.navbar-nav-right
+            // Home
+            li.nav-item
+              a.nav-item-child(href='/')
+                | Home
+            // End Home
+            // About
+            li.nav-item
+              a.nav-item-child(href='about')
+                | About
+            // End About
+            // Contact
+            li.nav-item
+              a.nav-item-child.active(href='contact')
+                | Contact
+            // End Contact
+      // End Navbar Collapse
+  // Navbar
+// ========== END HEADER ==========
+// ========== PAGE LAYOUT ==========
+// Google Map
+#map.map.height-300
+// Contact List
+.section-seperator
+  .content-md.container
+    .row
+      // Contact List
+      .col-sm-4.sm-margin-b-50
+        h4
+          a(href='#') New York
+          span.text-uppercase.margin-l-20 Head Office
+        p
+          | Lorem ipsum dolor sit amet consectetur adipiscing elit sed tempor incdidunt ut laboret dolor magna ut consequat siad esqudiat dolor
+        ul.list-unstyled.contact-list
+          li
+            i.margin-r-10.color-base.icon-call-out
+            |  1 012 3456 7890
+          li
+            i.margin-r-10.color-base.icon-envelope
+            |  hq@acidus.com
+      // End Contact List
+      // Contact List
+      .col-sm-4.sm-margin-b-50
+        h4
+          a(href='#') London
+          span.text-uppercase.margin-l-20 Operation
+        p
+          | Lorem ipsum dolor sit amet consectetur adipiscing elit sed tempor incdidunt ut laboret dolor magna ut consequat siad esqudiat dolor
+        ul.list-unstyled.contact-list
+          li
+            i.margin-r-10.color-base.icon-call-out
+            |  44 77 3456 7890
+          li
+            i.margin-r-10.color-base.icon-envelope
+            |  operation@acidus.com
+      // End Contact List
+      // Contact List
+      .col-sm-4.sm-margin-b-50
+        h4
+          a(href='#') Singapore
+          span.text-uppercase.margin-l-20 Finance
+        p
+          | Lorem ipsum dolor sit amet consectetur adipiscing elit sed tempor incdidunt ut laboret dolor magna ut consequat siad esqudiat dolor
+        ul.list-unstyled.contact-list
+          li
+            i.margin-r-10.color-base.icon-call-out
+            |  50 012 456 7890
+          li
+            i.margin-r-10.color-base.icon-envelope
+            |  finance@acidus.com
+      // End Contact List
+    // // end row
+// End Contact List
+// Comment
+.section-seperator
+  .content-md.container
+    .row.margin-b-40
+      .col-sm-6
+        h2 Send Us A Note
+        p
+          | Lorem ipsum dolor sit amet consectetur adipiscing elit sed tempor incididunt ut laboret dolore magna aliqua enim minim veniam exercitation
+    // // end row
+    .row
+      .col-md-5.col-sm-7
+        form(method='POST')
+          .margin-b-10
+            input.form-control(type='text' placeholder='Name' name='name')
+          .margin-b-10
+            input.form-control(type='text' placeholder='Email' name='email')
+          .margin-b-10
+            input.form-control(type='text' placeholder='Phone' name='phone')
+          .margin-b-20
+            textarea.form-control(rows='5' placeholder='Message' name='message')
+          button.btn-theme.btn-theme-sm.btn-base-bg.text-uppercase(type='submit') Submit
+    // // end row
+// End Comment
+// ========== END PAGE LAYOUT ==========
+// ========== FOOTER ==========
+footer.footer
+  // Links
+  .section-seperator
+    .content-md.container
+      .row
+        .col-sm-2.sm-margin-b-30
+          // List
+          ul.list-unstyled.footer-list
+            li.footer-list-item
+              a(href='#') Home
+            li.footer-list-item
+              a(href='#') About
+            li.footer-list-item
+              a(href='#') Work
+            li.footer-list-item
+              a(href='#') Contact
+          // End List
+        .col-sm-2.sm-margin-b-30
+          // List
+          ul.list-unstyled.footer-list
+            li.footer-list-item
+              a(href='#') Twitter
+            li.footer-list-item
+              a(href='#') Facebook
+            li.footer-list-item
+              a(href='#') Instagram
+            li.footer-list-item
+              a(href='#') YouTube
+          // End List
+        .col-sm-3
+          // List
+          ul.list-unstyled.footer-list
+            li.footer-list-item
+              a(href='#') Subscribe to Our Newsletter
+            li.footer-list-item
+              a(href='#') Privacy Policy
+            li.footer-list-item
+              a(href='#') Terms &amp; Conditions
+          // End List
+      // // end row
+  // End Links
+  // Copyright
+  .content.container
+    .row
+      .col-xs-6
+        img.footer-logo(src='img/logo.png' alt='Acidus Logo')
+      .col-xs-6.text-right
+        p.margin-b-0
+          a.fweight-700(href='http://keenthemes.com/preview/acidus/') Acidus
+          |  Theme Powered by: 
+          a.fweight-700(href='http://www.keenthemes.com/') KeenThemes.com
+    // // end row
+  // End Copyright
+// ========== END FOOTER ==========
+// Back To Top
+a.js-back-to-top.back-to-top(href='javascript:void(0);') Top
+// JAVASCRIPTS(Load javascripts at bottom, this will reduce page load time)
+// CORE PLUGINS
+script(src='vendor/jquery.min.js' type='text/javascript')
+script(src='vendor/jquery-migrate.min.js' type='text/javascript')
+script(src='vendor/bootstrap/js/bootstrap.min.js' type='text/javascript')
+// PAGE LEVEL PLUGINS
+script(src='vendor/jquery.easing.js' type='text/javascript')
+script(src='vendor/jquery.back-to-top.js' type='text/javascript')
+script(src='vendor/jquery.smooth-scroll.js' type='text/javascript')
+script(src='https://maps.googleapis.com/maps/api/js?sensor=true' type='text/javascript')
+script(src='vendor/google-map.js' type='text/javascript')
+// PAGE LEVEL SCRIPTS
+script(src='js/layout.min.js' type='text/javascript')
+script(src='js/components/google-map.min.js' type='text/javascript')
+// END BODY
