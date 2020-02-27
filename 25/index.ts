@@ -5,6 +5,50 @@
 //     currentSpeed: number;
 // }
 
+class GasTank {
+
+    private max: number = 50;
+
+    // ####################################
+
+    constructor(private current: number = 0) {
+    }
+
+    // ####################################
+
+    // public get(val: number): number {
+    //     if (!this.has()) {
+    //         throw new Error('Gas is off!');
+    //     }
+
+    //     this.current = this.current - val;
+
+    //     return val;
+    // }
+
+    // public set(val: number): void {
+    //     if ((this.current + val) > this.max) {
+    //         throw new Error('Gas tank is full!');
+    //     }
+
+    //     this.current = this.current + val;
+    // }
+
+    public has(): boolean {
+        if (this.current > 0) {
+            return true;
+        }
+
+        return false;
+    }
+
+    public getCurrent(): number {
+        return this.current;
+    }
+
+    // ####################################
+}
+
 class MyCar {
 
     private currentSpeed: number = 0;
@@ -13,7 +57,7 @@ class MyCar {
 
     //#############################
     
-    constructor() {}
+    constructor(private gasTank: GasTank) {}
 
     //#############################
 
@@ -26,6 +70,15 @@ class MyCar {
         if(this.start()){
             console.log('Go!');
             return this.currentSpeed;
+        } else {
+            console.log('First need start!');
+        }
+
+        if(this.gasTank.has()) {
+            console.log('Go!');
+            return this.currentSpeed;
+        } else {
+            console.log('Need gas!');
         }
     };
 
@@ -54,11 +107,11 @@ class MyCar {
     public stop(time: number): number {
         return time * this.currentSpeed;
     } 
-    
+     
     //##################################
 }
 
-const myCar = new MyCar();
+const myCar = new MyCar(50);
 
 console.log(myCar.start());
 console.log(myCar.go());
