@@ -1,0 +1,9 @@
+<h2>Book name</h2>
+<p>{{value}}</p>
+<p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Veniam inventore earum aliquid quos rerum vel numquam nesciunt
+    , incidunt, possimus dolorum dicta provident omnis voluptatem iusto rem. Quisquam necessitatibus modi officia.</p>
+    <app-chapter [name]="'Chapter 1'" [counterValue] = "5" [step] = "10" (showValue) = "show($event)"></app-chapter >
+    <app-chapter [name]="chapterName" (showValue) = "show($event)"></app-chapter>
+    <app-chapter (showValue) = "show($event)"></app-chapter>
+    <app-chapter (showValue) = "show($event)"></app-chapter>
+    <app-chapter (showValue) = "show($event)"></app-chapter>
