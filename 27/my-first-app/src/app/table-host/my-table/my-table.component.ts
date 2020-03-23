@@ -12,23 +12,12 @@ export class MyTableComponent implements OnInit {
 
   @Output() public removeProduct: EventEmitter<number> = new EventEmitter();
 
-  public product: Product = {
-      id: null,
-      name: null,
-      price: null
-  }
-
   constructor() { }
 
   ngOnInit(): void {
   }
 
-  public addProduct(): void {
-    console.log(this.product);
-  }
-
   public remove(product: Product): void {
-    this.productList = this.productList.filter((p: Product) => p.id !== product.id);
     this.removeProduct.emit(product.id);
   }
 

@@ -1,6 +1,6 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
-import { FormsModule } from '@angular/forms';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -12,6 +12,7 @@ import { BookComponent } from './book/book.component';
 import { ChapterComponent } from './book/chapter/chapter.component';
 import { TableHostComponent } from './table-host/table-host.component';
 import { MyTableComponent } from './table-host/my-table/my-table.component';
+import { TableFormComponent } from './table-host/table-form/table-form.component';
 
 @NgModule({
   declarations: [
@@ -23,12 +24,14 @@ import { MyTableComponent } from './table-host/my-table/my-table.component';
     BookComponent,
     ChapterComponent,
     TableHostComponent,
-    MyTableComponent
+    MyTableComponent,
+    TableFormComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
-    FormsModule
+    FormsModule,
+    ReactiveFormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

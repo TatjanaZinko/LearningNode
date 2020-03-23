@@ -32,6 +32,11 @@ export class TableHostComponent implements OnInit {
   }
 
   public removeProduct(id: number): void {
+    this.source = this.source.filter((p: Product) => p.id !== id);
     alert('Product removed!');
+  }
+
+  public addProduct(product: Product): void { 
+    this.source.push(product); 
   }
 }
