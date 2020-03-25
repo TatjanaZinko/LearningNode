@@ -1,12 +1,17 @@
 <div class="container">
     <div class="row">
-        <div class="col-9">
-            <app-my-table [productList] = "source" (removeProduct) = "removeProduct($event)"></app-my-table>
-        </div>
-        <div class="col-3">
-            <app-table-form  (addProduct) = "addProduct($event)"></app-table-form>
-        </div>
+      <div class="col-5">
+        <!-- <app-my-table [productList]="source" (removeProduct)="removeProduct($event)"></app-my-table> -->
+        <app-my-table></app-my-table>
+      </div>
+      <div class="col-4">
+          <app-my-list></app-my-list>
+      </div>
+      <div class="col-3">
+        <!-- <app-form (addProduct)="addProduct($event)"></app-form> -->
+        <app-form></app-form>
+      </div>
     </div>
-</div>
-
-
+  </div>
+  
+  

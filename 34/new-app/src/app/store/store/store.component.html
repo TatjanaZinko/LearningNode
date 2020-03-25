@@ -1,0 +1,27 @@
+<div class="container-fluid">
+    <div class="row">
+        <div class="col bg-dark text-white">
+            <a class="navbar-brand">SPORTS STORE</a>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-2 p-2">
+            <button class="btn btn-block btn-outline-primary">Home</button>
+            <!--ngFor по категориям
+            <button (click) = "method(data)">{{data}}</button>-->
+            <button class="btn btn-block btn-danger m-t-3" routerLink="/admin">Admin</button>
+        </div>
+        <div class="col-9 p-2">
+            <div *ngFor="let product of productList" class="card m-1 p-1 bg-light" >
+                <h4>
+                    {{product.name}}
+                    <span class="badge badge-pill badge-primary float-right">${{product.price}}</span>
+                </h4>
+                <div class="cart-text bg-white">
+                    {{product.desc}}
+                    <button class="btn btn-outline-primary  float-right">Buy</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

@@ -5,7 +5,11 @@
   "projects": {
     "my-first-app": {
       "projectType": "application",
-      "schematics": {},
+      "schematics": {
+        "@schematics/angular:component": {
+          "style": "scss"
+        }
+      },
       "root": "",
       "sourceRoot": "src",
       "prefix": "app",
@@ -24,7 +28,7 @@
               "src/assets"
             ],
             "styles": [
-              "src/styles.css",
+              "src/styles.scss",
               "node_modules/bootstrap/scss/bootstrap.scss"
             ],
             "scripts": []
@@ -89,7 +93,7 @@
               "src/assets"
             ],
             "styles": [
-              "src/styles.css"
+              "src/styles.scss"
             ],
             "scripts": []
           }
@@ -124,6 +128,6 @@
   },
   "defaultProject": "my-first-app",
   "cli": {
-    "analytics": "03efa5f2-4fdd-43a5-8dd4-f731769c55ff"
+    "analytics": "985cca8d-d9a8-4620-8e42-d555f2c2fb24"
   }
 }

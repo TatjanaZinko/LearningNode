@@ -1,42 +1,40 @@
 import { Component, OnInit } from '@angular/core';
+import { Product } from './product.model';
+import { TableService } from '../table.service';
+import { delay } from 'rxjs/operators';
 
-export class Product {
-  public id: number;
-  public name: string;
-  public price: number;
-}
-
-const products: Array<Product> = [
-  { id: 1, name: 'Product 1', price: 100 },
-  { id: 2, name: 'Product 2', price: 100 },
-  { id: 3, name: 'Product 3', price: 100 },
-  { id: 4, name: 'Product 4', price: 100 },
-  { id: 5, name: 'Product 5', price: 100 },
-  { id: 6, name: 'Product 6', price: 100 },
-  { id: 7, name: 'Product 7', price: 100 },
-  { id: 8, name: 'Product 8', price: 100 }
-]
 
 @Component({
   selector: 'app-table-host',
   templateUrl: './table-host.component.html',
-  styleUrls: ['./table-host.component.css']
+  styleUrls: ['./table-host.component.scss']
 })
 export class TableHostComponent implements OnInit {
 
-  public source: Product[] = products;
+  public source: Product[] = [];
 
-  constructor() { }
+  constructor(
+    private tableServise: TableService
+  ) { }
 
   ngOnInit(): void {
+    this.tableServise
+    .getProducts()
+    .pipe(
+      delay(2000)
+    )
+    .subscribe((data: Product[]) => {
+      this.source = data;
+    });
   }
 
   public removeProduct(id: number): void {
-    this.source = this.source.filter((p: Product) => p.id !== id);
-    alert('Product removed!');
+    alert(`Product with id: ${id} deleted!!!`);
+    this.source = this.source.filter((p) => p.id !== id)
   }
 
-  public addProduct(product: Product): void { 
-    this.source.push(product); 
+  public addProduct(product) {
+    this.source.push(product);
   }
-}
+
+  }

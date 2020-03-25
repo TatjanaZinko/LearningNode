@@ -1,6 +1,6 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
-import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { HttpClientModule } from '@angular/common/http';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -9,10 +9,14 @@ import { MenuComponent } from './menu/menu.component';
 import { ContentComponent } from './content/content.component';
 import { FooterComponent } from './footer/footer.component';
 import { BookComponent } from './book/book.component';
-import { ChapterComponent } from './book/chapter/chapter.component';
+import { ChupterComponent } from './book/chupter/chupter.component';
 import { TableHostComponent } from './table-host/table-host.component';
 import { MyTableComponent } from './table-host/my-table/my-table.component';
-import { TableFormComponent } from './table-host/table-form/table-form.component';
+import { FormsModule, ReactiveFormsModule }   from '@angular/forms';
+import { FormComponent } from './table-host/form/form.component';
+import { MyListComponent } from './table-host/my-list/my-list.component';
+import { RouterPrimerComponent } from './router-primer/router-primer.component';
+import { ProductDetailedComponent } from './product-detailed/product-detailed.component';
 
 @NgModule({
   declarations: [
@@ -22,16 +26,21 @@ import { TableFormComponent } from './table-host/table-form/table-form.component
     ContentComponent,
     FooterComponent,
     BookComponent,
-    ChapterComponent,
+    ChupterComponent,
     TableHostComponent,
     MyTableComponent,
-    TableFormComponent
+    FormComponent,
+    MyListComponent,
+    RouterPrimerComponent,
+    ProductDetailedComponent
+
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     FormsModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    HttpClientModule,
   ],
   providers: [],
   bootstrap: [AppComponent]

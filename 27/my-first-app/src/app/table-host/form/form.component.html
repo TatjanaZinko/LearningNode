@@ -1,0 +1,27 @@
+<form [formGroup]="myForm">
+  <div class="form-group">
+    <label for="id">id</label>
+    <input id="id" class="form-control" type="number" name="id" formControlName="id">
+    <div *ngIf="myForm.controls['id'].dirty && myForm.get('id').invalid">
+      <div *ngIf="myForm.get('id').errors.required" class="alert bg-danger">Required field</div>
+      <div *ngIf="myForm.get('id').errors.min" class="alert bg-danger">
+        Min id {{myForm.get('id').errors.min.min}}, actual {{myForm.get('id').errors.min.actual}}
+      </div>
+    </div>
+    </div>
+
+  <div class="form-group">
+    <label for="name">Name</label>
+    <input id="name" class="form-control" type="text" name="name" formControlName="name">
+  </div>
+
+  <div class="form-group">
+    <label for="price">Price</label>
+    <input id="price" class="form-control" type="number" name="price" formControlName="price">
+  </div>
+
+  <button [disabled]="myForm.invalid" class="btn btn-primary" (click)="add()">Add product</button>
+</form>
+<input #pass type="text">Login
+<button (click) = "login(pass.value)">login</button>
+
