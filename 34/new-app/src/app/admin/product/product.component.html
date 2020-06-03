@@ -1,1 +1,20 @@
-<p>product works!</p>
+<table class="table table-sm">
+    <tr>
+        <th>Id</th>
+        <th>Name</th>
+        <th>Description</th>
+        <th>Price</th>
+        <th>&nbsp;</th>
+    </tr>
+    <tr *ngFor = "let product of productList">
+        <td>{{product.id}}</td>
+        <td>{{product.name}}</td>
+        <td>{{product.desc}}</td>
+        <td>{{product.price}}</td>
+        <td>
+            <button class="btn btn-warning" (click) = "editProduct(product.id)">Edit</button>
+            <button class="btn btn-danger" (click) = "removeProduct(product.id)">Delete</button>
+        </td>
+    </tr>
+</table>
+<button class="btn btn-primary" (click) = "createProduct()">Create Product</button>

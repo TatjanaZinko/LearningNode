@@ -6,6 +6,7 @@ import { HomeComponent } from './home/home.component';
 import { ProductComponent } from './product/product.component';
 import { OrdersComponent } from './orders/orders.component';
 import { ProductFormComponent } from './product-form/product-form.component';
+import { AuthGuard } from './auth.guard';
 
 
 const routes: Routes = [
@@ -20,6 +21,7 @@ const routes: Routes = [
         { 
             path: 'home', 
             component: HomeComponent,
+            canActivate: [AuthGuard],
             children: [
                 {
                     path: 'product',
@@ -28,6 +30,10 @@ const routes: Routes = [
                 {
                     path: 'orders',
                     component: OrdersComponent,
+                },
+                {
+                    path: 'product/:mode',
+                    component: ProductFormComponent,
                 },
                 {
                     path: 'product/:mode/:id',

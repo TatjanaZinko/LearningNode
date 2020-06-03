@@ -4,14 +4,18 @@ import { StoreComponent } from './store/store.component';
 import { CartComponent } from './cart/cart.component';
 import { CheckoutComponent } from './checkout/checkout.component';
 import { StoreRoutingModule } from './store-routing.module';
+import { HeaderComponent } from './header/header.component';
+import { ReactiveFormsModule } from '@angular/forms';
+import { CartSummaryComponent } from './header/cart-summary/cart-summary.component';
 
 
 
 @NgModule({
-  declarations: [StoreComponent, CartComponent, CheckoutComponent],
+  declarations: [StoreComponent, CartComponent, CheckoutComponent, HeaderComponent, CartSummaryComponent],
   imports: [
     CommonModule,
-    StoreRoutingModule
+    StoreRoutingModule,
+    ReactiveFormsModule,
   ],
   exports: [StoreComponent, CartComponent]
 })

@@ -1,0 +1,16 @@
+@font-face {
+    font-family: 'Relay';
+    src: url('Relay-Regular.woff2') format('woff2'),
+        url('Relay-Regular.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'RelayCond';
+    src: url('RelayCond-Medium.woff2') format('woff2'),
+        url('RelayCond-Medium.woff') format('woff');
+    font-weight: 500;
+    font-style: normal;
+}
+

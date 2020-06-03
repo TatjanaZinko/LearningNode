@@ -7,6 +7,7 @@ import { ProductComponent } from './product/product.component';
 import { OrdersComponent } from './orders/orders.component';
 import { ProductFormComponent } from './product-form/product-form.component';
 import { AdminRoutingModule } from './admin.routing.module';
+import { ReactiveFormsModule, FormsModule } from '@angular/forms';
 
 
 
@@ -14,7 +15,9 @@ import { AdminRoutingModule } from './admin.routing.module';
   declarations: [AdminComponent, LoginComponent, HomeComponent, ProductComponent, OrdersComponent, ProductFormComponent],
   imports: [
     CommonModule,
-    AdminRoutingModule
+    AdminRoutingModule,
+    ReactiveFormsModule,
+    FormsModule
   ]
 })
 export class AdminModule { }

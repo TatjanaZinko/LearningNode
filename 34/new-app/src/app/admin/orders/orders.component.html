@@ -1,1 +1,24 @@
-<p>orders works!</p>
+<input type="checkbox" [{ngModel}] = "showShippedOrders">Display shipped orders
+<table class="table table-sm">
+    <tr>
+        <th>Name</th>
+        <th>Address</th>
+        <th>Cart</th>
+        <th>&nbsp;</th>
+    </tr>
+    <ng-container *ngFor = "let order of getOrderList()">
+        <tr>
+            <td>{{order.name}}</td>
+            <td>{{order.address}}</td>
+            <th>Product</th>
+            <th>Quantity</th>
+            <td>
+                <button class="btn" (click) = "shippedOrder(order)"></button>
+                <button class="btn" (click) = "shippedOrder(order)"></button>
+            </td>
+        </tr>
+        <tr *ngFor= "let cart of order.cart">
+            <td></td>
+        </tr>
+    </ng-container>
+</table>
